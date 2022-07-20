@@ -20,17 +20,17 @@
   let projects = [
     {
       name: "Web and Mobile",
-      src: "/full-stack.png",
+      src: "/full-stack-green.png",
       description: ``,
     },
     {
       name: "Blockchain",
-      src: "/blockchain.png",
+      src: "/blockchain-pink-white.png",
       description: ``,
     },
     {
       name: "Data Science, Machine & Deep Learning",
-      src: "/4431830.png",
+      src: "/green-brain.png",
       description: ``,
     },
   ];
@@ -132,9 +132,9 @@
 <main>
   <div class="pb-24 pt-24">
     <div class="flex justify-center">
-      <img class="w-36 h-36 rounded-full" alt="KomplitApp" src="profile_pic.jpeg" />
+      <img class="w-60 h-60 rounded-full" alt="KomplitApp" src="profile-pic-cropped.jpg" />
     </div>
-    <h1 class="text-5xl text-purple-800 font-thin text-center mb-12">
+    <h1 class="text-5xl red-text font-thick text-center mb-12">
       Dillon Cortez
     </h1>
     <HeadingText title="Software Engineer" />
@@ -155,7 +155,7 @@
             <img class="w-12 h-12" alt="{name} logo" {src} />
           </a>
           <span
-          class="tooltip rounded shadow-lg p-1 bg-purple-500 text-white text-xs -mt-8"
+          class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
           >{name}</span
           >
         </div>
@@ -168,9 +168,9 @@
     </div>
 
 
-    <div class="bg-purple-500 pt-12 pb-12 mb-12">
+    <div class=" purp pt-12 pb-12 mb-12">
       <!-- <HeadingText title={'<span class="italic">Value</span> Kami'} isPrimary /> -->
-      <div class="grid grid-cols-2 mt-8">
+      <div class="grid grid-cols-2 mt-8#F72585">
         {#each values as { src, alt, title, description }}
           <div class="flex flex-col items-center mx-10">
             <img
@@ -178,11 +178,11 @@
               {alt}
               class="w-24 h-24 mb-4 transform transition-transform hover:rotate-12"
             />
-            <p class="text-md text-center text-black font-medium tracking-wide">
+            <p class="text-lg text-center green-text font-medium tracking-wide">
               {@html title}
             </p>
             <p
-              class="text-sm text-center text-gray-800 mt-2 tracking-wide font-light"
+              class="text-md text-center text-white mt-2 tracking-wide font-light"
             >
               {@html description}
             </p>
@@ -200,15 +200,15 @@
         <ProjectCard {name} {src} {description} {href} />
       {/each}
     </div>
-    <div class="bg-purple-900 pt-12 pb-12 mb-12">
+    <div class=" purp pt-12 pb-12 mb-12">
         <div class="mt-8">
           <div class="flex flex-col items-center">
           <!-- <img
           {src}
-          {alt}
+          {alt}fill="#15F493"
           class="w-24 h-24 mb-4 transform transition-transform hover:rotate-12"
           /> -->
-          <p class="text-6xl text-center text-white font-large tracking-wide">
+          <p class="text-6xl text-center green-text font-large tracking-wide">
             7+ Years experience
           </p>
           <p class="text-md text-center text-white mt-2 tracking-wide font-light">
@@ -224,10 +224,10 @@
       <div />
       <div />
       {#each tools1 as { name, src }}
-        <div class="flex flex-col items-center has-tooltip">
+        <div class="flex flex-col items-center has-tooltip icon">
           <img class="w-16 h-16" alt={`${name}`} {src} />
           <span
-            class="tooltip rounded shadow-lg p-1 bg-purple-500 text-white text-xs -mt-8"
+            class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
             >{name}</span
           >
         </div>
@@ -238,10 +238,10 @@
       <div />
       <div />
       {#each tools2 as { name, src }}
-        <div class="flex flex-col items-center has-tooltip">
+        <div class="flex flex-col items-center has-tooltip icon">
           <img class="w-16 h-16" alt={`${name}`} {src} />
           <span
-            class="tooltip rounded shadow-lg p-1 bg-purple-500 text-white text-xs -mt-8"
+            class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
             >{name}</span
           >
         </div>
@@ -252,10 +252,10 @@
       <div />
       <div />
       {#each tools3 as { name, src }}
-        <div class="flex flex-col items-center has-tooltip">
+        <div class="flex flex-col items-center has-tooltip icon">
           <img class="w-16 h-16" alt={`${name}`} {src} />
           <span
-            class="tooltip rounded shadow-lg p-1 bg-purple-500 text-white text-xs -mt-8"
+            class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
             >{name}</span
           >
         </div>
@@ -294,5 +294,28 @@
   ::selection {
     color: #5c21b6;
     background: #ddd6fe;
+  }
+
+  .purp{
+    background-color: #3A0CA3;
+  }
+
+  .red-text{
+    color: #F72585;
+  }
+
+  .green-text{
+    color: #15F493;
+  }
+
+  main {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  .icon{
+    border: 2px solid #15F493;
+    border-radius: 100px;
+    margin: auto;
+    padding: 15px;
   }
 </style>
