@@ -132,7 +132,7 @@
 <main>
   <div class="pb-24 pt-24">
     <div class="flex justify-center">
-      <img class="w-60 h-60 rounded-full" alt="KomplitApp" src="profile-pic-cropped.jpg" />
+      <img class="w-60 h-60 rounded-full profile" alt="KomplitApp" src="profile-pic-cropped.jpg" />
     </div>
     <h1 class="text-5xl red-text font-thick text-center mb-12">
       Dillon Cortez
@@ -317,5 +317,8 @@
     border-radius: 100px;
     margin: auto;
     padding: 15px;
+  }
+  .profile {
+    border: 6px solid #15F493;
   }
 </style>
