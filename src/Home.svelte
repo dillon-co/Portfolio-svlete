@@ -316,7 +316,7 @@
     border: 2px solid #15F493;
     border-radius: 100px;
     margin: auto;
-    padding: 15px;
+    padding: auto;
   }
   .profile {
     border: 6px solid #15F493;
