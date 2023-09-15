@@ -209,7 +209,7 @@
           class="w-24 h-24 mb-4 transform transition-transform hover:rotate-12"
           /> -->
           <p class="text-6xl text-center green-text font-large tracking-wide">
-            7+ Years experience
+            8+ Years experience
           </p>
           <p class="text-md text-center text-white mt-2 tracking-wide font-light">
             I've been coding for a while. I've helped a lot of projects get off the ground. If you need to take a project to completion, and make sure it can scale, I can help.
