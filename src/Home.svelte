@@ -141,7 +141,7 @@
       <HeadingText title="Software Engineer" />
       <div class="mt-4">
         <p class="text-gray-300">dilloncortez@gmail.com</p>
-        <h5 class="text-gray-300">(801) 824 - 2592</h5>
+        <!-- <h5 class="text-gray-300"></h5> -->
       </div>
     </header>
 
