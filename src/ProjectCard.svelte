@@ -1,35 +1,30 @@
 <script>
   export let name;
   export let description;
-  export let src;
-  export let href;
+  // export let image;
+  export let link;
 </script>
 
-<div class="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/50 hover:transform hover:scale-105">
-  <div class="p-6">
-    <h3 class="text-2xl font-semibold text-green-400 text-center mb-4">
-      {@html name}
-    </h3>
-  </div>
-  <div class="flex justify-center items-center bg-gray-900 p-4">
-    <img class="rounded-md object-cover w-full h-64" {src} alt={name} />
-  </div>
-  <div class="p-6">
-    <p class="text-gray-300 mb-4">
-      {@html description}
-    </p>
-    {#if href != null}
+<a href={link} target="_blank" rel="noopener noreferrer" class="group">
+  <div class="relative bg-white bg-opacity-5 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 backdrop-blur-lg border border-white border-opacity-10">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+    <div class="relative p-6">
+      <h3 class="text-2xl font-semibold text-blue-300 text-center mb-4 group-hover:text-indigo-300 transition-colors duration-300">
+        {name}
+      </h3>
+    </div>
+    <!-- <div class="relative bg-black bg-opacity-40 p-4">
+      <img class="rounded-lg object-cover w-full h-48 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" src={image} alt={name} />
+    </div> -->
+    <div class="relative p-6">
+      <p class="text-gray-300 mb-4 text-center group-hover:text-white transition-colors duration-300">
+        {description}
+      </p>
       <div class="flex justify-end">
-        <a
-          {href}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300"
-        >
-          <img src="/googleplay.svg" alt="PlayStore icon" class="w-5 h-5 mr-2" />
-          <span class="text-sm font-medium">Download</span>
-        </a>
+        <!-- <span class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg group-hover:bg-indigo-500 transition-all duration-300">
+          View Project
+        </span> -->
       </div>
-    {/if}
+    </div>
   </div>
-</div>
+</a>

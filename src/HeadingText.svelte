@@ -3,18 +3,18 @@
   export let isPrimary = false;
 </script>
 
-<div class="flex justify-center items-center mb-8">
+<div class="flex justify-center items-center mb-12">
   <div
-    class="w-4 h-4 bg-pink-500 transform rotate-45 transition-all duration-300 hover:bg-green-400"
-  />
+    class="w-8 h-1 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full transform transition-all duration-300 group-hover:scale-x-150"
+  ></div>
   <h2
-    class={`text-2xl font-semibold text-center mx-4 ${
-      isPrimary ? "text-white" : "text-gray-200"
+    class={`text-3xl font-bold text-center mx-6 ${
+      isPrimary ? "bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500" : "text-white"
     }`}
   >
     {@html title}
   </h2>
   <div
-    class="w-4 h-4 bg-pink-500 transform rotate-45 transition-all duration-300 hover:bg-green-400"
-  />
+    class="w-8 h-1 bg-gradient-to-r from-yellow-500 to-pink-500 rounded-full transform transition-all duration-300 group-hover:scale-x-150"
+  ></div>
 </div>
