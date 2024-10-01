@@ -129,126 +129,94 @@
     },
   ]
 </script>
-<main>
-  <div class="pb-24 pt-24">
-    <div class="flex justify-center">
-      <img class="w-60 h-60 rounded-full profile" alt="KomplitApp" src="profile-pic-cropped.jpg" />
-    </div>
-    <h1 class="text-5xl red-text font-thick text-center mb-12">
-      Dillon Cortez
-    </h1>
-    <HeadingText title="Software Engineer" />
-    <div class="text-center">
-      <p>dilloncortez@gmail.com</p>
-      <h5>(801) 824 - 2592</h5>
-    </div>
+<main class="bg-gray-900 text-white min-h-screen">
+  <div class="container mx-auto px-4 py-16">
+    <header class="text-center mb-16">
+      <div class="mb-8">
+        <img class="w-48 h-48 rounded-full mx-auto border-4 border-green-400 shadow-lg" alt="KomplitApp" src="profile-pic-cropped.jpg" />
+      </div>
+      <h1 class="text-5xl font-bold mb-4 text-pink-500">
+        Dillon Cortez
+      </h1>
+      <HeadingText title="Software Engineer" />
+      <div class="mt-4">
+        <p class="text-gray-300">dilloncortez@gmail.com</p>
+        <h5 class="text-gray-300">(801) 824 - 2592</h5>
+      </div>
+    </header>
 
-    <div class="grid grid-cols-12 mb-24 mt-4">
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
+    <div class="flex justify-center space-x-6 mb-16">
       {#each links as { src, href, name }}
-        <div class="flex flex-col items-center has-tooltip">
-          <a {href}>
-            <img class="w-12 h-12" alt="{name} logo" {src} />
-          </a>
-          <span
-          class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
-          >{name}</span
-          >
-        </div>
+        <a {href} class="group" target="_blank" rel="noopener noreferrer">
+          <div class="bg-gray-800 p-3 rounded-full transition-all duration-300 transform group-hover:scale-110 group-hover:bg-indigo-600">
+            <img class="w-8 h-8" alt="{name} logo" {src} />
+          </div>
+          <span class="sr-only">{name}</span>
+        </a>
       {/each}
     </div>
-    <div class="max-w-md mx-auto">
-      <p class="text-sm mb-24 text-center">
-        <span class="text-purple-800"></span>
-      </p>
-    </div>
 
-
-    <div class=" purp pt-12 pb-12 mb-12">
-      <!-- <HeadingText title={'<span class="italic">Value</span> Kami'} isPrimary /> -->
-      <div class="grid grid-cols-2 mt-8#F72585">
+    <section class="bg-indigo-900 rounded-lg p-8 mb-16">
+      <div class="grid md:grid-cols-2 gap-8">
         {#each values as { src, alt, title, description }}
-          <div class="flex flex-col items-center mx-10">
+          <div class="flex flex-col items-center text-center">
             <img
               {src}
               {alt}
               class="w-24 h-24 mb-4 transform transition-transform hover:rotate-12"
             />
-            <p class="text-lg text-center green-text font-medium tracking-wide">
+            <h3 class="text-xl font-semibold mb-2 text-green-400">
               {@html title}
-            </p>
-            <p
-              class="text-md text-center text-white mt-2 tracking-wide font-light"
-            >
+            </h3>
+            <p class="text-gray-300">
               {@html description}
             </p>
           </div>
         {/each}
       </div>
-    </div>
+    </section>
 
-    <HeadingText title="Things I do" />
-    <br/>
-    <br/>
-    <br/>
-    <div class="pl-12 pr-12 grid md:grid-cols-3 sm:grid-cols-2 gap-1 mb-24">
-      {#each projects as { name, src, description, href }}
-        <ProjectCard {name} {src} {description} {href} />
-      {/each}
-    </div>
-    <div class=" purp pt-12 pb-12 mb-12">
-        <div class="mt-8">
-          <div class="flex flex-col items-center">
-          <!-- <img
-          {src}
-          {alt}fill="#15F493"
-          class="w-24 h-24 mb-4 transform transition-transform hover:rotate-12"
-          /> -->
-          <p class="text-6xl text-center green-text font-large tracking-wide">
-            8+ Years experience
-          </p>
-          <p class="text-md text-center text-white mt-2 tracking-wide font-light">
-            I've been coding for a while. I've helped a lot of projects get off the ground. If you need to take a project to completion, and make sure it can scale, I can help.
-          </p>
-        </div>
+    <section class="mb-16">
+      <HeadingText title="Things I do" />
+      <div class="grid md:grid-cols-3 gap-8 mt-8">
+        {#each projects as { name, src, description, href }}
+          <ProjectCard {name} {src} {description} {href} />
+        {/each}
       </div>
-    </div>
+    </section>
 
-    <HeadingText title={'Tools I Use'} />
-    <div class="grid grid-cols-12 mb-24 mt-8">
-      <div />
-      <div />
-      <div />
-      {#each tools1 as { name, src }}
-        <div class="flex flex-col items-center has-tooltip icon">
-          <img class="w-16 h-16" alt={`${name}`} {src} />
-          <span
-            class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
-            >{name}</span
-          >
-        </div>
-      {/each}
-    </div>
-    <div class="grid grid-cols-12 mb-24 mt-4">
-      <div />
-      <div />
-      <div />
-      {#each tools2 as { name, src }}
-        <div class="flex flex-col items-center has-tooltip icon">
-          <img class="w-16 h-16" alt={`${name}`} {src} />
-          <span
-            class="tooltip rounded shadow-lg p-1  purp text-white text-xs -mt-8"
-            >{name}</span
-          >
-        </div>
-      {/each}
-    </div>
-    <div class="grid grid-cols-12 mb-24 mt-4">
-      <div />
+    <section class="bg-indigo-900 rounded-lg p-8 mb-16 text-center">
+      <h2 class="text-4xl font-bold mb-4 text-green-400">
+        8+ Years Experience
+      </h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        I've been coding for a while. I've helped a lot of projects get off the ground. If you need to take a project to completion, and make sure it can scale, I can help.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <HeadingText title="Tools I Use" />
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-6 mt-8">
+        {#each tools as { name, src }}
+          <div class="flex flex-col items-center group">
+            <div class="bg-gray-800 p-4 rounded-full mb-2 transition-all duration-300 transform group-hover:scale-110 group-hover:bg-green-400">
+              <img class="w-12 h-12" alt={name} {src} />
+            </div>
+            <span class="text-sm text-gray-400 group-hover:text-white">{name}</span>
+          </div>
+        {/each}
+      </div>
+    </section>
+
+    <footer class="text-center text-gray-500 text-sm">
+      <p>
+        Wonderful icons by <a href="https://streamlineicons.com" target="_blank" class="text-green-400 hover:underline">Streamline</a>
+        and <a href="https://devicon.dev/" target="_blank" class="text-green-400 hover:underline">Devicon</a>
+      </p>
+    </footer>
+  </div>
+</main>
+
       <div />
       <div />
       {#each tools3 as { name, src }}

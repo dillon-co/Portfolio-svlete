@@ -3,18 +3,18 @@
   export let isPrimary = false;
 </script>
 
-<div class="flex justify-center items-center mb-2">
+<div class="flex justify-center items-center mb-8">
   <div
-    class="w-3 h-3 bg-purple-300 transform rotate-45 hover:-rotate-45 hover:bg-purple-500 transition-all"
+    class="w-4 h-4 bg-pink-500 transform rotate-45 transition-all duration-300 hover:bg-green-400"
   />
   <h2
-    class={`text-xl font-extralight text-center ml-2 mr-2 ${
-      isPrimary ? "text-white" : ""
+    class={`text-2xl font-semibold text-center mx-4 ${
+      isPrimary ? "text-white" : "text-gray-200"
     }`}
   >
     {@html title}
   </h2>
   <div
-    class="w-3 h-3 bg-purple-300 transform rotate-45 hover:-rotate-45 hover:bg-purple-500 transition-all"
+    class="w-4 h-4 bg-pink-500 transform rotate-45 transition-all duration-300 hover:bg-green-400"
   />
 </div>

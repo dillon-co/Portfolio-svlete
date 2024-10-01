@@ -5,40 +5,31 @@
   export let href;
 </script>
 
-<div
-  class="rounded-xl flex flex-col hover:shadow-lg shadow-none border-opacity-0 hover:border-opacity-100 border-purple-500 border-2"
->
-<div class="p-6 ">
-  <p class="text-xl text-center">
-    {@html name}
-  </p>
-</div>
-  <div class="flex justify-center items-center">
-    <img class=" rounded-md" {src} alt="Header" />
+<div class="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/50 hover:transform hover:scale-105">
+  <div class="p-6">
+    <h3 class="text-2xl font-semibold text-green-400 text-center mb-4">
+      {@html name}
+    </h3>
+  </div>
+  <div class="flex justify-center items-center bg-gray-900 p-4">
+    <img class="rounded-md object-cover w-full h-64" {src} alt={name} />
   </div>
   <div class="p-6">
-    <p class="text-sm">
+    <p class="text-gray-300 mb-4">
       {@html description}
     </p>
     {#if href != null}
-      <div class="flex flex-row-reverse">
-        <div class="inline-block mt-2">
-          <a
-            {href}
-            target="_blank"
-            class="flex rounded-lg items-center p-2 border-2 border-purple-200 hover:border-purple-400 hover:no-underline transition-all"
-          >
-            <img src="/googleplay.svg" alt="PlayStore icon" class="w-4 h-4" />
-            <span class="ml-2 text-sm mr-2 text-gray-800">Unduh</span>
-          </a>
-        </div>
+      <div class="flex justify-end">
+        <a
+          {href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300"
+        >
+          <img src="/googleplay.svg" alt="PlayStore icon" class="w-5 h-5 mr-2" />
+          <span class="text-sm font-medium">Download</span>
+        </a>
       </div>
     {/if}
   </div>
 </div>
-<style>
-  img {
-    height: 300px;
-    width: 300px;
-  }
-</style>
